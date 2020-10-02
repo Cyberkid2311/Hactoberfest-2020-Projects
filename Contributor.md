@@ -7,3 +7,4 @@
 * [Manvi Jha](https://github.com/Severus-Matthew)
 * [Jyoti Harode](https://github.com/jYOTIHARODE)
 * [Annie Saxena](https://github.com/anniesaxena)
+* [Kush Rajpurohit](https://github.com/Kushrajpurohit)

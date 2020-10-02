@@ -8,3 +8,4 @@
 * [Jyoti Harode](https://github.com/jYOTIHARODE)
 * [Annie Saxena](https://github.com/anniesaxena)
 * [Kush Rajpurohit](https://github.com/Kushrajpurohit)
+* [Supriyo Banerjea](https://github.com/SupriyoBanerjea)

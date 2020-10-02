@@ -6,3 +6,4 @@
 * [Coding Capricorn](https://github.com/codingCapricorn)
 * [Manvi Jha](https://github.com/Severus-Matthew)
 * [Jyoti Harode](https://github.com/jYOTIHARODE)
+* [Annie Saxena](https://github.com/anniesaxena)

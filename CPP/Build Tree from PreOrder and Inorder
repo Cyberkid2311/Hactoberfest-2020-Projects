@@ -1,0 +1,97 @@
+QUESTION :
+_____________________________________________________________________
+Given preorder and inorder create the tree
+
+Input Format
+Enter the size of the preorder array N then add N more elements and store in the array denoting the preorder traversal of the tree. Then enter the size of the inorder array M and add M more elements and store the inorder traversal of the array.
+
+Constraints
+1 <= N, M <= 10^4
+
+Output Format
+Display the tree using a modified preorder function. For each node , first print its left child's data , then the data of the root itself , then the data of its right child. Do this for each node in a new line in preorder manner. If one of the children does not exist print END in its place. Refer to the sample testcase.
+
+Sample Input
+3
+1 2 3
+3
+3 2 1
+Sample Output
+2 => 1 <= END
+3 => 2 <= END
+END => 3 <= END
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SOLUTION
+_________________________________________________________________________
+#include<bits/stdc++.h>
+using namespace std;
+class node{
+public:
+int data;
+node* left;
+node* right;
+ node(int d){
+	 data=d;
+	 left=NULL;
+	 right=NULL;
+ }
+};
+node* buildBST(int pre[],int in[],int s,int e){
+	static int i=0;
+	if(s>e){
+		return NULL;
+	}
+	int key=pre[i];
+	node *temp=new node(key);
+	int idx=-1;
+	for(int j=s;j<=e;j++){
+		if(key==in[j]){
+			idx=j;
+			break;
+		}
+	}
+	i++;
+	temp->left = buildBST(pre,in,s,idx-1);
+	temp->right= buildBST(pre,in,idx+1,e);
+	
+	return temp;
+	
+}
+
+void preOrder(node* root){
+	if(root==NULL)
+	return;
+	if(root==NULL)
+		return;
+
+	if(root->left!=NULL)
+		cout<<root->left->data;
+	else 
+		cout<<"END";
+	cout<<" => "<<root->data<<" <= ";
+	if(root->right!=NULL)
+		cout<<root->right->data;
+	else
+		cout<<"END";
+	cout<<endl;
+	preOrder(root->left);
+	preOrder(root->right);
+}
+
+int main() {
+	int n;
+	cin>>n;
+	int pre[n];
+	for(int i=0;i<n;i++){
+		cin>>pre[i];
+	}
+	int m;
+	cin>>m;
+	int in[m];
+	for(int i=0;i<n;i++){
+		cin>>in[i];
+	}
+  node* root= buildBST(pre,in ,0,n-1);
+   preOrder(root);
+	return 0;
+}

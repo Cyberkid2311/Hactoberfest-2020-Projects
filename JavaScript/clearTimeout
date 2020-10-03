@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clear Timeout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <button onclick="d=setTimeout(enable,2000)">Enable Timeout</button>
+    <button onclick="clearTimeout(d)">Disable Timeout</button>
+</body>
+<script>
+    enable=()=>{
+        alert("Working");
+    }
+</script>
+</html>

@@ -9,3 +9,4 @@
 * [Annie Saxena](https://github.com/anniesaxena)
 * [Kush Rajpurohit](https://github.com/Kushrajpurohit)
 * [Anshul Choudhary](https://github.com/achoudh5)
+* [Supriyo Banerjea](https://github.com/SupriyoBanerjea)

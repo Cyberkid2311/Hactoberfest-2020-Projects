@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Timings Introduction</title>
+    </head>
+    <body>
+        <button onclick="setTimeout(timer,1500);">Click this</button>
+    </body>
+    <script type="text/javascript">
+        timer=()=>
+        {
+            alert("Timer Working");
+        }
+    </script>
+</html>

@@ -26,7 +26,7 @@ for line in fh:
 conn.commit()
 
 # https://www.sqlite.org/lang_select.html
-sqlstr = 'SELECT org, count FROM Counts ORDER BY count DESC LIMIT 10'
+sqlstr = 'SELECT org, count FROM Counts ORDER BY count'
 
 for row in cur.execute(sqlstr):
     print(str(row[0]), row[1])

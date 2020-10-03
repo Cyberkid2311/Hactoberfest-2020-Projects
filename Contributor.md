@@ -11,3 +11,4 @@
 * [Anshul Choudhary](https://github.com/achoudh5)
 * [Supriyo Banerjea](https://github.com/SupriyoBanerjea)
 * [Divyanshi Agarwal](https://github.com/Divyanshi29)
+* [Shreya Punetha](https://github.com/shreyapuntha)

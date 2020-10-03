@@ -1,3 +1,23 @@
+Himanshu is now a spy. He has to send a package at a specified time. So his boss sends him two codes one of 4 bit and another 6 bit. The first one represents the hour ( 0 to 11) and the second one represents the minutes (0 to 59). Now, unfortunately, Himanshu could not get the codes but he got the number of set bits in those two codes combined. You have to find all the time that can be represented by those number of set bits.  
+
+Input format
+The first line contains a single integer N, the number of bits. 
+
+Output format
+Print all the space-separated time values in this format hh: mm.
+
+Constraints:
+1<=n<=10
+
+Example
+Input
+1
+
+Output
+0:32 0:16 0:08 0:04 0:02 0:01 8:00 4:00 2:00 1:00
+
+
+
 #include <bits/stdc++.h>
   using namespace std;
 vector<pair<int,int>> m1;

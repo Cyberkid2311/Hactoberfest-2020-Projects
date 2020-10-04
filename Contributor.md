@@ -12,3 +12,4 @@
 * [Supriyo Banerjea](https://github.com/SupriyoBanerjea)
 * [Divyanshi Agarwal](https://github.com/Divyanshi29)
 * [Shreya Punetha](https://github.com/shreyapuntha)
+* [Digvijay Singh](https://github.com/dsprajput) 

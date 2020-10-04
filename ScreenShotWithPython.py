@@ -8,19 +8,19 @@ import keyboard
 
 #calling this loop till user don't press x this will take screenshot every time user press c
 while True:
-  # is_pressed function of keyboard library  simply says that "Hey python program see this button is pressed by user just now"
+	# is_pressed function of keyboard library  simply says that "Hey python program see this button is pressed by user just now"
 	if keyboard.is_pressed('c'):
-    # image is a object of which was returned by ImageGrab module's Grab function 
+		# image is a object of which was returned by ImageGrab module's Grab function 
 		image = ImageGrab.grab()
-    
-    #here we are simply saving the image in the same directory with the name capture and extension png 
+
+		#here we are simply saving the image in the same directory with the name capture and extension png 
 		image.save("Capture.png")
-    
-    #stop the program once x is pressed
+
+	#stop the program once x is pressed
 	elif keyboard.is_pressed('x'):
 		break
-    
-    #go ahead otherwise
+
+	#go ahead otherwise
 	else:
 		pass
 

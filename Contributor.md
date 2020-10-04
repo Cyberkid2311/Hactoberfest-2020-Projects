@@ -11,3 +11,5 @@
 * [Anshul Choudhary](https://github.com/achoudh5)
 * [Supriyo Banerjea](https://github.com/SupriyoBanerjea)
 * [Shubham Prateek](https://github.com/Shubham-Prateek)
+* [Divyanshi Agarwal](https://github.com/Divyanshi29)
+* [Shreya Punetha](https://github.com/shreyapuntha)

@@ -7,10 +7,20 @@ out_of_guesses=False
 while guess!=secret_word and not (out_of_guesses ):
     if guess_count<guess_limit:
         guess=input("Enter guess:")
+        if guess=="giraffe":
+            print("You win!")
+            out_of_guesses =False
+            break
+        elif guess=="GIRAFFE":
+            print("You win!")
+            out_of_guesses =False
+            break
+        elif guess=="Giraffe":
+            print("You win!")
+            out_of_guesses =False
+            break
         guess_count+=1
     else:
         out_of_guesses =True
 if out_of_guesses:
     print("out of guesses,YOU LOSE!")
-else:
-    print("you win!")

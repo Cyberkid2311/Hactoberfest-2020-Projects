@@ -13,3 +13,4 @@
 * [Shubham Prateek](https://github.com/Shubham-Prateek)
 * [Divyanshi Agarwal](https://github.com/Divyanshi29)
 * [Shreya Punetha](https://github.com/shreyapuntha)
+* [Shubham Menroy](https://github.com/shubham9672)

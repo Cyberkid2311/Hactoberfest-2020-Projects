@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+class B;
+class A
+{
+  int a;
+
+public:
+  void setdata(int x) { a = x; }
+  friend void sum(A, B);
+};
+class B
+{
+  int b;
+
+public:
+  void setdata(int y) { b = y; }
+  friend void sum(A, B);
+};
+void sum(A o1, B o2)
+{
+  cout << "sum :" << o1.a + o2.b << endl;
+}
+int main()
+{
+  A obj1;
+  B obj2;
+  obj1.setdata(5);
+  obj2.setdata(4);
+  sum(obj1, obj2);
+  return 0;
+}

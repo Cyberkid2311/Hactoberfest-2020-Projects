@@ -6,7 +6,7 @@ public:
     while (l != r + 1) {
         int lower = *l < *r ? *l++ : *r--;
         level = max(level, lower);
-        water += level - lower;
+        water = water +(level - lower);
     }
     return water;
 }

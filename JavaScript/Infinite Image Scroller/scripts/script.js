@@ -12,7 +12,7 @@ let imagesArray = [];
 //to fetch images from Unsplash API
 async function loadImagesFromApi() {
   const count = 30;
-  const apiKey = "u7yu057qlT_6DKnCa0NKXh1b8PjzXJx1-hE2WCv7bto";
+  const apiKey = "YOUR_API_KEY_HERE";
   const apiUrl = `https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${count}`;
 
   if (window.fetch) {

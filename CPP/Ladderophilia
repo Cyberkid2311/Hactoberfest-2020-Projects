@@ -1,0 +1,55 @@
+Aditya is fond of ladders. Everyday he goes through pictures of ladders online but unfortunately today he ran out of ladder pictures online. Write a program to print “ladder with N steps”, which he can use to get his daily dose of ladder love.
+
+INPUT:
+Input contains integer N, the number of steps in the ladder
+
+OUTPUT:
+
+Print the ladder with the gap between two side rails being 3 spaces(“   “).
+
+Check the sample output for format of printing the ladder.
+
+CONSTRAINTS:
+
+1<=N<=40
+
+SAMPLE INPUT 
+4
+SAMPLE OUTPUT 
+*   *
+*   *
+*****
+*   *
+*   *
+*****
+*   *
+*   *
+*****
+*   *
+*   *
+*****
+*   *
+*   *
+
+#include<stdio.h>
+
+int main(){
+    int n,j,k,l,i;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        for(j=0;j<2;j++){
+            for(k=0;k<1;k++)
+            printf("*   *");
+            printf("\n\n");
+        }
+        for(l=0;l<5;l++)
+        printf("*");
+        printf("\n\n");
+    }
+     for(j=0;j<2;j++){
+            for(k=0;k<1;k++)
+            printf("*   *");
+            printf("\n\n");
+        }
+        return 0;
+}

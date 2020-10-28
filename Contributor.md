@@ -14,3 +14,4 @@
 * [Divyanshi Agarwal](https://github.com/Divyanshi29)
 * [Shreya Punetha](https://github.com/shreyapuntha)
 * [Sahil Jamwal](https://github.com/sahiljamwal)
+* [Ganapathy Rama Subramanian](https://github.com/Gunsubramanian)

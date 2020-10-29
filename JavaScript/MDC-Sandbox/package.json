@@ -1,0 +1,29 @@
+{
+  "name": "mdc-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "dependencies": {
+    "autoprefixer": "^10.0.1",
+    "css-loader": "^5.0.0",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "material-components-web": "^7.0.0",
+    "mini-css-extract-plugin": "^1.2.1",
+    "normalize.css": "^8.0.1",
+    "postcss-loader": "^4.0.4",
+    "sass": "^1.27.1",
+    "sass-loader": "^10.0.4",
+    "webpack": "^5.3.1",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "webpack serve --no-stats"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

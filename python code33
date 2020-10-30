@@ -1,0 +1,20 @@
+#wap to write fibonacci series into a file named fibo.txt
+def file_write(content):
+    with open("fibo.txt","a") as f:
+        f.write(content)
+def fibonacci(nterms):
+    n1,n2=0,1
+    count=0
+    if nterms<=0:
+        return("enter a positive number")
+    elif nterms == 1:
+        file_write(str("fibonaci upto",nterms,":"+"\n"+n1))
+    else:
+        file_write("fibonacci sequence:" +"\n")
+        nth=n1+n2
+        n1=n2
+        n2=nth
+        count += 1
+    n=int(input("enter number of terms"))
+    fibonacci(n)
+       

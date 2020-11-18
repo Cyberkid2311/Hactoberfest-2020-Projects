@@ -1,0 +1,121 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+bool isValid(int r, int c, int n, int m)
+{
+    return (r >= 0 && r < n && c >= 0 && c < m);
+}
+
+int minTime(int** mat, int n, int m)
+{
+    bool** visited = new bool*[n];
+    for(int i = 0; i < n; i++)
+    visited[i] = new bool[m];
+    
+    for(int i = 0; i < n; i++)
+    for(int j = 0; j < m; j++)
+    visited[i][j] = false;
+    
+    queue<pair<int,int>> q;
+    
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < m; j++)
+        {
+            if(mat[i][j] == 2)
+            {
+            q.push(make_pair(i,j));
+            visited[i][j] = true;
+            }
+        }
+    }
+    
+    q.push(make_pair(-1,-1));
+    
+    int cnt = 0;
+    
+    while(!q.empty() && q.front() != make_pair(-1,-1))
+    {
+        bool flag = false;
+    
+        while(q.front() != make_pair(-1,-1))
+      {
+        pair<int,int> p = q.front();
+        q.pop();
+        
+        int dx[] = {-1,0,0,1};
+        int dy[] = {0,1,-1,0};
+    
+        for(int i = 0; i < 4; i++)
+        {
+            int r = p.first + dx[i];
+            int c = p.second + dy[i];
+            
+            if(isValid(r,c,n,m) && !visited[r][c])
+            {
+                if(mat[r][c] == 1)
+                {
+                    mat[r][c] = 2;
+                    flag = true;
+                    q.push(make_pair(r,c));
+                    visited[r][c] = true;
+                }
+                if(mat[r][c] == 2)
+                {
+                    flag = true;
+                    q.push(make_pair(r,c));
+                    visited[r][c] = true;
+                }
+            }
+            
+        }
+     
+       } 
+        
+        q.pop();
+        if(flag)
+        cnt++;
+        
+        q.push(make_pair(-1,-1));
+        
+    }
+    
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < m; j++)
+        {
+            if(mat[i][j] == 1)
+            return -1;
+        }
+    }
+    
+    return cnt;
+    
+}
+
+int main()
+ {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+	
+	int t;
+	cin >> t;
+	while(t--)
+	{
+	    int n,m;
+	    cin >> n >> m;
+	    int** mat = new int*[n];
+	    for(int i = 0; i < n; i++)
+	    mat[i] = new int[m];
+	    
+	    for(int i = 0; i < n; i++)
+	    for(int j = 0; j < m; j++)
+	    cin >> mat[i][j];
+	    
+	    cout << minTime(mat,n,m) << endl;
+	    
+	}
+	
+	return 0;
+}

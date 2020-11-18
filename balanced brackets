@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+string isBalanced(string s) 
+{
+    stack<char> tempStack;
+    int j=0;
+    while(s[j]!='\0')
+    {
+        switch (s[j]) 
+        {
+            case '{':
+            case '(':
+            case '[':
+                tempStack.push(s[j]);
+                break;
+            case '}':
+                if ( tempStack.empty() || tempStack.top() != '{' )
+                  return "NO";
+                tempStack.pop();
+                break;
+            case ')':
+                if ( tempStack.empty() || tempStack.top() != '(' ) 
+                    return "NO";
+                tempStack.pop();
+                    break;
+            case ']':
+                if ( tempStack.empty() || tempStack.top()!='[' ) 
+                    return "NO";
+                tempStack.pop();
+                break;
+        }
+        j++;
+    }
+    return tempStack.empty() ? "YES" : "NO";
+}
+int main()
+{
+    int t;
+    cin >> t;
+    for(int i = 0; i < t; i++)
+    {
+    string s;
+    cin >> s;
+    cout << isBalanced(s) << endl;
+    }
+    return 0;
+}

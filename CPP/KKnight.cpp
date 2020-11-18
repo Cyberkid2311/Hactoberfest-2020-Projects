@@ -81,7 +81,7 @@ int max_knight(int m, int n)
 int main() 
 { 
     int n = 10, m = 10; 
-    cout<<"Enter dimensions of board: \n";
+    cout<<"Enter dimensions of the board: \n";
   	cin>>m>>n;
   	cout<<"Possible Solutions:";
     cout << max_knight(m, n)<<endl; 

@@ -4,54 +4,48 @@ A linked list is represented by a pointer to the first node of the linked list. 
 Each node in a list consists of at least two parts: Data and Node*/
 //let us create a linked list of three nodes and print their values
 
-#include <stdio.h> 
-#include <stdlib.h> 
-  
-struct Node { 
-    int data; 
-    struct Node* next; 
-}; 
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{
+    int data;
+    struct node *next;
+};
+struct node *head=0,*newnode,*temp;
+void create()
+{
+    for(int i=0;i<3;i++)
+    {
+        newnode=(struct node*)malloc(sizeof(struct node));
+        printf("Enter the data\n");
+        scanf("%d",&newnode->data);
+        if(head==0)
+        {
+            head=temp=newnode;
+        }
+        else
+        {
+            temp->next=newnode;
+            temp=newnode;
+        }
+    }
+}
 
-// This function prints contents of linked list starting from 
-// the given node 
-void printList(struct Node* n) 
-{ 
-    // The condition states that the loop will run until the pointer points to NULL
-    while (n != NULL) {  
-        printf(" %d ", n->data);
-        //Traversing through the linked list with help of pointers
-        // each pointer pointing to the next node
-        n = n->next; 
-    } 
-} 
-  
-// Program to create a simple linked 
-// list with 3 nodes 
-int main() 
-{ 
-    struct Node* head = NULL; 
-    struct Node* second = NULL; 
-    struct Node* third = NULL; 
-  
-    // allocate 3 nodes in the heap  Point 1
-    head = (struct Node*)malloc(sizeof(struct Node)); 
-    second = (struct Node*)malloc(sizeof(struct Node)); 
-    third = (struct Node*)malloc(sizeof(struct Node)); 
-  
-    //POINT 2- 
-    head->data = 1; // assign data in first node 
-    head->next = second; // Link first node with the second node 
-  
-    //POINT 3-
-    second->data = 2;  // assign data to second node 
-    second->next = third;  // Link second node with the third node 
-  
-    //POINT 4-
-    third->data = 3; // assign data to third node 
-    third->next = NULL; // pointing to NULL as this marks the end of linked list
-     printList(head); 
-    return 0; 
-} 
+void display()
+{
+    temp=head;
+    printf("data are \n");
+    while(temp!=NULL)
+    {
+        printf("%d ",temp->data);
+        temp=temp->next;
+    }
+}
+int main()
+{
+    create();
+    display();
+}
 
 /*  AT POINT 1-
  Three blocks have been allocated dynamically.  
